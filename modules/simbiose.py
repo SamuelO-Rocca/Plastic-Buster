@@ -19,11 +19,11 @@ def simbiose():
     # ======================
     dados = pd.DataFrame({
         "Fungo": [
-            "Aspergillus niger",
-            "Trichoderma reesei",
             "Penicillium chrysogenum",
+            "Mucor racemosus",
+            "Aspergillus niger",
             "Fusarium solani",
-            "Mucor racemosus"
+            "Trichoderma reesei",
         ],
         "Microrganismo Simbiótico": [
             "Pseudomonas putida",
@@ -42,6 +42,10 @@ def simbiose():
         "Eficiência da Degradação (%)": [78, 69, 85, 72, 80],
         "Expressão Enzimática (U/mL)": [320, 250, 410, 300, 360]
     })
+
+    # Ordena do melhor (maior eficiência) ao pior
+    dados = dados.sort_values(by="Eficiência da Degradação (%)", ascending=False)
+
 
     # ======================
     # VISUALIZAÇÃO 1: GRÁFICO DE BARRAS REFINADO

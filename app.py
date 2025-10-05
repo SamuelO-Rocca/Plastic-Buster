@@ -47,7 +47,7 @@ with st.sidebar:
             "house",
             "map",
             "bar-chart",
-            "calculator"
+            "robot",
             "box-seam",
             "bug",
             "share",
