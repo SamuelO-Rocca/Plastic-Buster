@@ -21,6 +21,7 @@ from modules.dashboard import dashboard_analitico
 from modules.plasticoInsert import inserir_plastico
 from modules.fungoInsert import inserir_fungo
 from modules.simbiose import simbiose
+from modules.predictor import predictor
 
 # =====================
 # SIDEBAR — MENU LATERAL
@@ -36,6 +37,7 @@ with st.sidebar:
             "Home",
             "Mapa",
             "Dashboard",
+            "Preditor",
             "Inserir Plástico",
             "Inserir Fungo",
             "Simbiose",
@@ -45,10 +47,12 @@ with st.sidebar:
             "house",
             "map",
             "bar-chart",
+            "calculator"
             "box-seam",
             "bug",
             "share",
-            "info-circle"
+            "info-circle",
+            
         ],
         menu_icon="cast",
         default_index=0
@@ -80,3 +84,6 @@ elif escolha == "Simbiose":
 
 elif escolha == "Sobre":
     sobre()
+
+elif escolha == "Preditor":
+    predictor()
