@@ -42,16 +42,6 @@ def home():
     st.markdown("<p class='subtitulo'>Inovação biotecnológica e inteligência artificial unidas para regenerar o planeta</p>", unsafe_allow_html=True)
     st.write("")
 
-    # ========= Banner ou imagem central =========
-    try:
-        banner = Image.open("assets/banner.png")
-        st.image(banner, use_container_width=True)
-    except:
-        st.info("💡 Adicione um arquivo `assets/banner.png` para exibir o banner principal.")
-
-    st.write("")
-    st.markdown("---")
-
     # ========= Seção de pilares =========
     st.markdown("### 🚀 Nossos Pilares Estratégicos")
     col1, col2, col3 = st.columns(3)

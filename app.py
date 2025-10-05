@@ -54,10 +54,6 @@ with st.sidebar:
     st.markdown("### Plastic Busters 🌱")
     st.markdown("IA • Biotecnologia • Remediação")
 
-    # Tema visual
-    tema = st.radio("🎨 Tema visual", ["Escuro", "Claro"], horizontal=True)
-    aplicar_tema(tema)
-
     # Menu principal
     escolha = option_menu(
         menu_title="Navegação",
