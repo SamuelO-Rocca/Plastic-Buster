@@ -84,10 +84,6 @@ with st.sidebar:
         default_index=0
     )
 
-    st.markdown("---")
-    tema = st.radio("Tema", ["Escuro", "Claro"], horizontal=True)
-    aplicar_tema(tema)
-
     st.caption("© 2025 Plastic Busters | EcoAI Division")
 
 

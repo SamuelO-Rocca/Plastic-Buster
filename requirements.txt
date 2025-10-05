@@ -1,0 +1,12 @@
+# Dependências essenciais do projeto Plastic Buster
+streamlit
+pandas
+plotly
+folium
+streamlit-folium
+streamlit-option-menu
+networkx
+matplotlib
+pillow
+requests
+numpy
