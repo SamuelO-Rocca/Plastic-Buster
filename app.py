@@ -1,11 +1,16 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-# Importa os módulos de cada página
+# =====================
+# IMPORTAÇÃO DOS MÓDULOS
+# =====================
 from modules.home import home
 from modules.sobre import sobre
-from modules.mapa import mapa as mapa
+from modules.mapa import mapa
 from modules.dashboard import dashboard_analitico
+from modules.plasticoInsert import inserir_plastico
+from modules.fungoInsert import inserir_fungo
+from modules.simbiose import simbiose  # <-- Import simbiótico
 
 
 # =====================
@@ -47,23 +52,42 @@ def aplicar_tema(tema):
 
 
 # =====================
-# SIDEBAR
+# SIDEBAR — MENU LATERAL
 # =====================
 with st.sidebar:
     st.image("assets/logo.png", width=120)
-    st.markdown("### Plastic Busters 🌱")
+    st.markdown("### Plastic Busters")
     st.markdown("IA • Biotecnologia • Remediação")
 
-    # Menu principal
+    # Menu principal (lado esquerdo)
     escolha = option_menu(
         menu_title="Navegação",
-        options=["Home", "Sobre", "Mapa", "Dashboard"],
-        icons=["house", "info-circle", "map", "bar-chart"],
+        options=[
+            "Home",
+            "Mapa",
+            "Dashboard",
+            "Inserir Plástico",
+            "Inserir Fungo",
+            "Simbiose",  # <--- NOVA ABA LATERAL
+            "Sobre"
+        ],
+        icons=[
+            "house",          # Home
+            "map",            # Mapa
+            "bar-chart",      # Dashboard
+            "box-seam",       # Inserir Plástico
+            "bug",            # Inserir Fungo
+            "share",          # Simbiose (ícone de conexão)
+            "info-circle"     # Sobre
+        ],
         menu_icon="cast",
         default_index=0
     )
 
     st.markdown("---")
+    tema = st.radio("Tema", ["Escuro", "Claro"], horizontal=True)
+    aplicar_tema(tema)
+
     st.caption("© 2025 Plastic Busters | EcoAI Division")
 
 
@@ -72,9 +96,21 @@ with st.sidebar:
 # =====================
 if escolha == "Home":
     home()
-elif escolha == "Sobre":
-    sobre()
+
 elif escolha == "Mapa":
     mapa()
+
 elif escolha == "Dashboard":
     dashboard_analitico()
+
+elif escolha == "Inserir Plástico":
+    inserir_plastico()
+
+elif escolha == "Inserir Fungo":
+    inserir_fungo()
+
+elif escolha == "Simbiose":
+    simbiose()
+
+elif escolha == "Sobre":
+    sobre()

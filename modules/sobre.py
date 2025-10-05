@@ -106,16 +106,19 @@ def sobre():
 
     # ========= Equipe =========
     st.markdown("<h3 class='secao-titulo'>👥 Nossa Equipe</h3>", unsafe_allow_html=True)
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4, col5, col6  = st.columns(6)
 
     membros = [
-        ("assets/team1.png", "Dra. Marina Alves", "Pesquisadora-Chefe em Micologia"),
-        ("assets/team2.png", "Rafael Torres", "Engenheiro de IA e Modelagem Ambiental"),
-        ("assets/team3.png", "Laura Kim", "Cientista de Dados e Análise Climática"),
+        ("assets/team1.png", "Gustavi Kim", "Dono do projeto"),
+        ("assets/team2.png", "Samuel Rocca", "Desenvolvedor"),
+        ("assets/team3.png", "João Pedro", "Desenvolvedor"),
+        ("assets/team4.png", "Bibs", "Auxiliar de TI"),
+        ("assets/team5.png", "Marim", "Biologo"),
+        ("assets/team6.png", "Alex", "Desenvolvedor")
     ]
 
     for i, (img, nome, cargo) in enumerate(membros):
-        with [col1, col2, col3][i]:
+        with [col1, col2, col3, col4, col5, col6 ][i]:
             try:
                 foto = Image.open(img)
                 st.image(foto, use_container_width=True, caption=nome)
