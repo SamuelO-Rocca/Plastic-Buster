@@ -40,7 +40,6 @@ with st.sidebar:
             "Preditor",
             "Inserir Plástico",
             "Inserir Fungo",
-            "Simbiose",
             "Sobre"
         ],
         icons=[
@@ -50,7 +49,6 @@ with st.sidebar:
             "robot",
             "box-seam",
             "bug",
-            "share",
             "info-circle",
             
         ],
@@ -78,9 +76,6 @@ elif escolha == "Inserir Plástico":
 
 elif escolha == "Inserir Fungo":
     inserir_fungo()
-
-elif escolha == "Simbiose":
-    simbiose()
 
 elif escolha == "Sobre":
     sobre()
