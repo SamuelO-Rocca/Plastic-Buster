@@ -1,0 +1,55 @@
+{
+  "project": {
+    "name": "Plastic Busters — Eco IA",
+    "version": "1.0.0",
+    "author": "Samuel",
+    "description": "Sistema inteligente para análise simbiótica entre fungos e microplásticos."
+  },
+
+  "paths": {
+    "raw_data": "data/raw/",
+    "processed_data": "data/processed/",
+    "reports": "data/reports/",
+    "temp": "data/temp/",
+    "models": "models/"
+  },
+
+  "data_sources": {
+    "csv": "data/raw/amostras_fungo.csv",
+    "json": "data/raw/sensores_ambiente.json",
+    "pdf": "data/raw/relatorio_lab.pdf",
+    "database": "data/raw/microplasticos.db"
+  },
+
+  "streamlit": {
+    "theme": "dark",
+    "language": "pt-BR",
+    "page_title": "Dashboard Simbiótico — Plastic Busters",
+    "sidebar_title": "Painel de Controle"
+  },
+
+  "ml_model": {
+    "type": "RandomForestRegressor",
+    "params": {
+      "n_estimators": 100,
+      "max_depth": 5,
+      "random_state": 42
+    },
+    "target_column": "taxa_degradacao"
+  },
+
+  "symbiose": {
+    "ph_ideal": 7.0,
+    "temp_min": 10,
+    "temp_max": 35,
+    "oxigenio_min": 2.0,
+    "umidade_ideal": 0.65
+  },
+
+  "logging": {
+    "level": "INFO",
+    "file": "logs/system.log",
+    "max_size_mb": 5,
+    "backup_count": 3
+  }
+}

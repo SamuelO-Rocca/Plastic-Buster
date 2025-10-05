@@ -76,4 +76,3 @@ def mapa():
 
         except Exception as e:
             st.error(f"Erro ao obter dados meteorológicos: {e}")
-
